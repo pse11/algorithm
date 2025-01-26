@@ -1,4 +1,7 @@
 function solution(numbers) {
-    numbers= numbers.map((value)=>value*2)
-    return numbers
+    const answer = [];
+    for(let i=0;i<numbers.length;i++){
+        answer.push(numbers[i]*2);
+    }
+    return answer;
 }
