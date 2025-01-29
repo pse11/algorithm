@@ -1,9 +1,9 @@
 function solution(n) {
-    let count =0
-    if(n%7>0){
-        count=Math.floor(n/7)+1
-    }else{
-        count=Math.floor(n/7)
+    let result =0;
+    if((n/7)%1===0){
+        result=n/7;
+    }else {
+        result = Math.floor(n/7)+1;
     }
-    return count
+    return result;
 }
