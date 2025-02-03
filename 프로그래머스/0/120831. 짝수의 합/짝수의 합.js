@@ -1,7 +1,7 @@
 function solution(n) {
-    let sum=0
+    let sum=0;
     for(let i=0;i<=n;i+=2){
-        sum+=i
+        sum+=i;
     }
-    return sum
+    return sum;
 }
