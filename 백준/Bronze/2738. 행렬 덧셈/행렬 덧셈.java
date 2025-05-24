@@ -12,7 +12,7 @@ public class Main{
 
     int[][] arr1 = new int[N][M];
     int[][] arr2 = new int[N][M];
-    int[][] sum = new int[N][M];
+    int sum =0;
     //arr1 배열 값 넣기
     for(int i=0;i<N;i++){
         str = new StringTokenizer(br.readLine());
@@ -31,10 +31,12 @@ public class Main{
     //배열 합
     for(int i=0;i<N;i++){
       for(int j=0;j<M;j++){
-        sum[i][j]=arr1[i][j]+arr2[i][j];
-        System.out.print(sum[i][j]+" ");
+        sum=arr1[i][j]+arr2[i][j];
+        bw.write(sum+" ");
       }
-      System.out.println();
-    } 
+      bw.newLine();
+    }
+    bw.flush();
+    bw.close();  //이거 반드시 넣어주자 
   }
 }
