@@ -10,12 +10,13 @@ public class Main{
       StringTokenizer st = new StringTokenizer(br.readLine());
       int R = Integer.parseInt(st.nextToken());
       String S = st.nextToken();
-      for(int j=0;j<S.length();j++){ //R번 반복
+      for(int j=0;j<S.length();j++){
         for(int k=0;k<R;k++){
-          System.out.print(S.charAt(j));
+          bw.write(S.charAt(j));
         }
       }
-      System.out.println();
+      bw.write("\n");
     }
+    bw.close();
   }
 }
