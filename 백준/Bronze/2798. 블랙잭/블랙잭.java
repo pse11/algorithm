@@ -18,18 +18,19 @@ public class Main{
     }
 
     int sum = 0;
+    int max = 0;
     List<Integer> list = new ArrayList<>();
     for(int i=0;i<N;i++){
       for(int j=i+1;j<N;j++){
         for(int k=j+1;k<N;k++){
           sum=arr[i]+arr[j]+arr[k];
-          if(sum<=M){ //M보다 작은 sum인경우 조건은 만족하므로 
-            list.add(sum); //list에 추가해준뒤, max로 최대한 M에 가까운 합 출력
+          if(sum<=M&&sum>max){ 
+            max=sum; 
           }
         }
       }
     }
-    bw.write(Collections.max(list)+"");
+    bw.write(max+"");
     bw.close();
   }
 }
