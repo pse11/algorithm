@@ -6,13 +6,16 @@ public class Main{
 
     int N = Integer.parseInt(br.readLine());
     int count = -1;
-    for(int x=0;x<=1000;x++){
-      for(int y=0;y<=1666;y++){
+    int min=N/3+1;
+    for(int x=0;x<=N/5;x++){
+      for(int y=0;y<=N/3;y++){
         if(5*x+3*y==N){
           count=x+y;
+          min = Math.min(min,count);
+          break;
         }
       }
     }
-    System.out.println(count);
+    System.out.println(min==N/3+1?-1:min);
   }
 }
