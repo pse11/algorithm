@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -13,7 +12,7 @@ public class Main {
 		StringTokenizer st = null;
     StringBuilder sb = new StringBuilder();
 		int N = Integer.parseInt(br.readLine());
-		Queue<Integer> q = new LinkedList<>();
+		Deque<Integer> q = new LinkedList<>();
 		for(int i=0;i<N;i++) {
 			st = new StringTokenizer(br.readLine());
 			switch(st.nextToken()) {
@@ -47,8 +46,7 @@ public class Main {
 				if(q.isEmpty()) {
 					sb.append("-1\n");
 				}else {
-					Deque<Integer> d = (Deque<Integer>) q;
-					sb.append(d.getLast()+"\n");
+					sb.append(q.getLast()+"\n");
 				}
 				break;
 			}
