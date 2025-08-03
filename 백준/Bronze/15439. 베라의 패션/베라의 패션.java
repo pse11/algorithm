@@ -1,9 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.StringTokenizer;
 
 public class Main {
 
@@ -12,16 +9,9 @@ public class Main {
 		
 		int N = Integer.parseInt(br.readLine());
 		
-		int count = 0;
-		//서로 다른 색상으로 조합해야하기 때문에
-		//i와 j가 다를 경우에만 count++
-		for(int i=0;i<N;i++) {
-			for(int j=0;j<N;j++) {
-				if(i!=j) {
-					count++;
-				}
-			}
-		}
-		System.out.println(count);
+		//총 가능한 조합 : N*N
+		//상하의 같은 경우 : N
+		//문제 조건에 맞는 조합 : N*N-N = N(N-1)
+		System.out.println(N*(N-1));
 	}
 }
