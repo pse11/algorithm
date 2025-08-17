@@ -7,9 +7,11 @@ import java.util.StringTokenizer;
 
 public class Main {
 	
-	static int[] arr; 
-	static int N,M;
+	static int N;
+	static int M;
+	static int[] arr;
 	static StringBuilder sb = new StringBuilder();
+	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
@@ -20,11 +22,11 @@ public class Main {
 		
 		arr = new int[M];
 		
-		backtrack(1,0);
+		back(0,1);
 		System.out.println(sb);
-		
 	}
-	public static void backtrack(int at, int depth) { 
+	
+	public static void back(int depth, int start) {
 		if(depth==M) {
 			for(int val:arr) {
 				sb.append(val).append(" ");
@@ -32,9 +34,10 @@ public class Main {
 			sb.append("\n");
 			return;
 		}
-		for(int i=at;i<=N;i++) {
+		
+		for(int i=start;i<=N;i++) {
 			arr[depth]=i;
-			backtrack(i+1,depth+1);
+			back(depth+1,i+1);
 		}
 	}
 }
