@@ -1,9 +1,9 @@
 function solution(my_string) {
-    let sum = 0
+    let result = 0;
     for(let i=0;i<my_string.length;i++){
-        if(!isNaN(my_string[i])){
-            sum+=parseInt(my_string[i])
+        if(!isNaN(my_string[i])){ //숫자인경우
+            result += Number(my_string[i]);
         }
     }
-    return sum
+    return result;
 }
