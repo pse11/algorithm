@@ -1,4 +1,5 @@
 function solution(array) {
-    const max = Math.max(...array)
-    return [max, array.indexOf(max)]
+    let max = Math.max(...array);
+    return [max,array.indexOf(max)];
+    
 }
