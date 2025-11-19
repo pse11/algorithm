@@ -1,3 +1,7 @@
 function solution(my_string) {
-    return my_string.split('').filter((value)=>!isNaN(value)).map((value)=>parseInt(value)).sort()
+    var answer = my_string
+                    .split('')
+                    .filter((v)=>!isNaN(v))
+                    .map(Number);
+    return answer.sort();
 }
