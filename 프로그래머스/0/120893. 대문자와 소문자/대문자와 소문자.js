@@ -1,3 +1,11 @@
 function solution(my_string) {
-    return my_string.split('').map((value)=>value===value.toUpperCase()?value.toLowerCase():value.toUpperCase()).join('')
+    let result = "";
+    for(let i=0;i<my_string.length;i++){
+        if(my_string[i]===my_string[i].toUpperCase()){ //대문자일때
+            result+= my_string[i].toLowerCase();
+        }else {
+            result+=my_string[i].toUpperCase();
+        }
+    }
+    return result;
 }
