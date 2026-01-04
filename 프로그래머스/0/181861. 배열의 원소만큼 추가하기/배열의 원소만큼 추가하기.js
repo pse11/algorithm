@@ -1,9 +1,9 @@
 function solution(arr) {
-    let X = []
-    for(let i=0;i<arr.length;i++){
-        for(let j=0;j<arr[i];j++){
-            X.push(arr[i]);
+    let X = [];
+    arr.forEach((v)=>{
+        for(let i=0;i<v;i++){
+            X.push(v);
         }
-    }
+    })
     return X;
 }
