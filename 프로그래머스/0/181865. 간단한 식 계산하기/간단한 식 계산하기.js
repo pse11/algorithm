@@ -1,11 +1,11 @@
 function solution(binomial) {
-    const arr = binomial.split(" ");
-    switch(arr[1]){
-        case "+":
-            return Number(arr[0])+Number(arr[2]);
-        case "-":
-            return Number(arr[0])-Number(arr[2]);
-        case "*":
-            return Number(arr[0])*Number(arr[2]);
-    }
+    //함수 반환 객체 선언
+    const ops = {
+        "+": (a,b)=>a+b,
+        "-": (a,b)=>a-b,
+        "*": (a,b)=>a*b
+    };
+    
+    const [a, op, b] = binomial.split(" ");
+    return ops[op](+a,+b); //+a로 바로 숫자로 변경하여 전달
 }
