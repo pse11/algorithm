@@ -1,8 +1,6 @@
 function solution(array, commands) {
-    let result = [];
-    commands.forEach((command)=>{
+    return commands.map((command)=>{
         let [i,j,k] = command;
-        result.push(array.slice(i-1,j).sort((a,b)=>a-b)[k-1]);
+        return array.slice(i-1,j).sort((a,b)=>a-b)[k-1];
     })
-    return result;
 }
