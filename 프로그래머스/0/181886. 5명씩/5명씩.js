@@ -1,7 +1,7 @@
 function solution(names) {
-    return names.filter((v,i)=>{
-        if(i%5===0){
-            return v;
-        }
-    })
+    let result = [];
+    for(let i=0;i<names.length;i+=5){
+        result.push(names[i]);
+    }
+    return result;
 }
