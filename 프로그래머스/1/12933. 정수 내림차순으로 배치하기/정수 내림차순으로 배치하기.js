@@ -2,7 +2,7 @@ function solution(n) {
     //문자로 풀이
      return Number(Array.from(n.toString()).sort((a,b)=>b-a).join(""));
     
-    //숫자로 풀이(더빠름)
+    //숫자로 풀이
 //     let arr = [];
     
 //     do{
