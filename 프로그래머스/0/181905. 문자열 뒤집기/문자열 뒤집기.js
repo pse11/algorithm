@@ -1,5 +1,6 @@
 function solution(my_string, s, e) {
-    const [a,b,c] = [my_string.slice(0,s), my_string.slice(s,e+1), my_string.slice(e+1)];
+    const string = my_string.substring(s,e+1);
+    const reverse_str = string.split("").reverse().join("");
     
-    return a+b.split("").reverse().join("")+c;
+    return my_string.replace(string, reverse_str);
 }
