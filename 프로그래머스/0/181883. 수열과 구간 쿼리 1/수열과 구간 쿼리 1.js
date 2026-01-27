@@ -1,4 +1,8 @@
 function solution(arr, queries) {
-    var answer = [];
-    return answer;
+    queries.map(([s,e])=>{
+        for(let i=s;i<=e;i++){
+            arr[i]++;
+        }
+    })
+    return arr;
 }
